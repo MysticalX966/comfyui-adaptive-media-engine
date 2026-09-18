@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/comfyui-adaptive-media-engine-header.png" alt="ComfyUI Adaptive Media Engine" width="100%">
+</p>
+
 # ComfyUI Adaptive Media Engine
 
 **A model-agnostic ComfyUI skill architecture for AI agents.**
