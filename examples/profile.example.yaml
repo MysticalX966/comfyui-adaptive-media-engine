@@ -1,0 +1,59 @@
+id: example-image-profile
+name: Example Image Profile
+
+media_type:
+  - image
+
+tasks:
+  - text_to_image
+
+capabilities:
+  - photorealistic
+
+status: NEEDS_SETUP
+
+workflow:
+  template: workflows/image/text_to_image/example/v1.json
+  active_version: 1
+  last_known_good: null
+
+model_family:
+  - example
+
+loader:
+  type: standard
+
+hardware:
+  min_vram_gb: 8
+  recommended_vram_gb: 12
+
+requirements:
+  models:
+    - "<model-file>"
+  nodes:
+    - "<loader-class>"
+    - CLIPTextEncode
+    - VAEDecode
+    - SaveImage
+
+parameters:
+  prompt:
+    node: "3"
+    input: text
+  seed:
+    node: "6"
+    input: noise_seed
+  width:
+    node: "9"
+    input: width
+  height:
+    node: "9"
+    input: height
+
+outputs:
+  - image
+
+quality:
+  default_preset: balanced
+
+priority: 50
